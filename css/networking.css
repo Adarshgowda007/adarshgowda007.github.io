@@ -34,7 +34,7 @@
   height: 65vh;
   background:
     linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
-    url("assets/netwrok.jpg") center/cover no-repeat;
+    url("assets/netwrok.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   padding: 0 80px;
