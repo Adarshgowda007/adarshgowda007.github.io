@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IT Infrastructure Services | AGXen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #020617;
+  --panel: rgba(15,23,42,0.65);
+  --border: rgba(148,163,184,0.15);
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: #e5e7eb;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(2,6,23,0.75);
+  backdrop-filter: blur(14px);
+  z-index: 999;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav a {
+  margin-left: 32px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav a:hover { color: var(--accent); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(2,6,23,.2), #020617),
+    url("assets/infra_3.png") center/cover no-repeat;
+}
+
+.hero h1 {
+  font-size: 62px;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.hero p {
+  max-width: 720px;
+  font-size: 20px;
+  margin: 28px 0 42px;
+  color: var(--muted);
+}
+
+.btn {
+  padding: 16px 44px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* SECTION */
+section {
+  padding: 140px 80px;
+}
+
+.section-head {
+  max-width: 760px;
+  margin-bottom: 80px;
+}
+
+.section-head h2 {
+  font-size: 44px;
+  letter-spacing: -0.5px;
+}
+
+.section-head p {
+  margin-top: 14px;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(15,23,42,0.7),
+    rgba(2,6,23,0.7)
+  );
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 34px;
+  backdrop-filter: blur(12px);
+  transition: all .35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56,189,248,.5);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 46px;
+  color: var(--accent);
+}
+
+.stat p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* CTA */
+.cta {
+  padding: 160px 40px;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(56,189,248,.15), transparent);
+}
+
+.cta h2 {
+  font-size: 46px;
+}
+
+.cta p {
+  margin: 22px 0 46px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+  padding: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+@media(max-width:900px){
+  .hero { padding: 0 30px; }
+  .hero h1 { font-size: 40px; }
+  section { padding: 100px 30px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">AGXen</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>
+      Infrastructure<br>
+      Built for Scale
+    </h1>
+    <p>
+      Enterprise-grade IT infrastructure engineered for uptime,
+      security, and performance — from data centers to hybrid cloud.
+    </p>
+    <a href="#contact" class="btn">Talk to an Architect</a>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section>
+  <div class="section-head">
+    <h2>What We Engineer</h2>
+    <p>
+      We don’t just deploy servers — we design resilient systems
+      that survive growth, failures, and attacks.
+    </p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🖥️ Compute & Virtualization</h3>
+      <p>Bare metal, VMware, KVM, Proxmox with high availability.</p>
+    </div>
+    <div class="card">
+      <h3>🌐 Network Architecture</h3>
+      <p>Firewalls, VLANs, VPNs, routing, zero-trust networks.</p>
+    </div>
+    <div class="card">
+      <h3>💾 Storage & DR</h3>
+      <p>RAID, NAS/SAN, backup automation, disaster recovery.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Monitoring</h3>
+      <p>Proactive alerts, dashboards, predictive failure detection.</p>
+    </div>
+    <div class="card">
+      <h3>🔐 Security</h3>
+      <p>Hardening, access controls, audits, patch strategy.</p>
+    </div>
+    <div class="card">
+      <h3>⚙️ Automation</h3>
+      <p>Provisioning, scripting, infra-as-code, scaling.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section>
+  <div class="stats">
+    <div class="stat">
+      <h3>99.99%</h3>
+      <p>Uptime Focus</p>
+    </div>
+    <div class="stat">
+      <h3>10K+</h3>
+      <p>Servers Managed</p>
+    </div>
+    <div class="stat">
+      <h3>24×7</h3>
+      <p>Monitoring</p>
+    </div>
+    <div class="stat">
+      <h3>0-Downtime</h3>
+      <p>Upgrade Strategy</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta" id="contact">
+  <h2>Stop Managing Servers.<br>Start Scaling.</h2>
+  <p>
+    Let our infrastructure architects design systems
+    that don’t wake you up at 3 AM.
+  </p>
+  <a href="tel:+91XXXXXXXXXX" class="btn">Schedule a Call</a>
+</div>
+
+<footer>
+  © 2026 AGXen Infrastructure & IT Solutions
+</footer>
+
+</body>
+</html>
