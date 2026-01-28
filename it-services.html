@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IT Infrastructure Services | AGXen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #020617;
+  --panel: rgba(15,23,42,0.65);
+  --border: rgba(148,163,184,0.15);
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: #e5e7eb;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(2,6,23,0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  z-index: 999;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav a {
+  margin-left: 32px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav a:hover { color: var(--accent); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(2,6,23,.3), #020617),
+    url("assets/infra_3.png") center/cover no-repeat;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -1.2px;
+}
+
+.hero p {
+  max-width: 720px;
+  font-size: 20px;
+  margin: 26px 0 40px;
+  color: var(--muted);
+}
+
+.btn {
+  padding: 16px 44px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* SECTION */
+section {
+  padding: 140px 80px;
+}
+
+.section-head {
+  max-width: 760px;
+  margin-bottom: 80px;
+}
+
+.section-head h2 {
+  font-size: 42px;
+}
+
+.section-head p {
+  margin-top: 14px;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(15,23,42,0.7),
+    rgba(2,6,23,0.7)
+  );
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 34px;
+  backdrop-filter: blur(12px);
+  transition: all .35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56,189,248,.5);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* WHY */
+.why {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+
+.why div h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.why div p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* CTA */
+.cta {
+  padding: 160px 40px;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(56,189,248,.15), transparent);
+}
+
+.cta h2 {
+  font-size: 44px;
+}
+
+.cta p {
+  margin: 22px 0 46px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+  padding: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+@media(max-width:900px){
+  .hero { padding: 0 30px; }
+  .hero h1 { font-size: 38px; }
+  section { padding: 100px 30px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">AGXen</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>
+      IT Infrastructure<br>
+      Services
+    </h1>
+    <p>
+      Reliable day-to-day IT services for desktops, laptops,
+      and business systems — delivered on-site and remotely.
+    </p>
+    <a href="#contact" class="btn">Request Support</a>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section>
+  <div class="section-head">
+    <h2>What We Support</h2>
+    <p>
+      Practical IT infrastructure services focused on
+      end-user systems, stability, and business continuity.
+    </p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🖥️ Desktop & Laptop Support</h3>
+      <p>Installation, troubleshooting, repair, and preventive servicing.</p>
+    </div>
+
+    <div class="card">
+      <h3>💿 OS Installation & Upgrade</h3>
+      <p>Windows & Linux installation, upgrades, driver and patch setup.</p>
+    </div>
+
+    <div class="card">
+      <h3>🛡️ Antivirus & Security</h3>
+      <p>Antivirus installation, configuration, renewals, and malware cleanup.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔧 Hardware Repair & Replacement</h3>
+      <p>RAM, HDD/SSD, power supply, motherboard, and peripheral replacement.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌐 Remote IT Support</h3>
+      <p>Remote OS installation, software setup, issue resolution.</p>
+    </div>
+
+    <div class="card">
+      <h3>📦 Software Installation</h3>
+      <p>Office tools, business software, drivers, utilities, licensing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section>
+  <div class="section-head">
+    <h2>Why AGXen</h2>
+    <p>
+      We focus on fast resolution, minimal downtime,
+      and dependable IT support.
+    </p>
+  </div>
+
+  <div class="why">
+    <div>
+      <h4>Quick Response</h4>
+      <p>Fast on-site and remote issue resolution.</p>
+    </div>
+    <div>
+      <h4>Experienced Engineers</h4>
+      <p>Hands-on support with real infrastructure experience.</p>
+    </div>
+    <div>
+      <h4>Cost-Effective</h4>
+      <p>AMC and on-demand support options.</p>
+    </div>
+    <div>
+      <h4>Business Focused</h4>
+      <p>Reduce downtime and improve productivity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta" id="contact">
+  <h2>Need Reliable IT Support?</h2>
+  <p>
+    Get professional IT services for your office,
+    staff, and business systems.
+  </p>
+  <a href="tel:+91XXXXXXXXXX" class="btn">Contact AGXen</a>
+</div>
+
+<footer>
+  © 2026 AGXen Infrastructure & IT Solutions
+</footer>
+
+</body>
+</html>
