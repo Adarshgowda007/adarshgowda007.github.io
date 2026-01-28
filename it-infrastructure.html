@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IT Infrastructure Services | AGXen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      padding: 0 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(2,6,23,0.85);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      margin-left: 30px;
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      height: 70vh;
+      background:
+        linear-gradient(rgba(2,6,23,0.8), rgba(2,6,23,0.95)),
+        url("assets/hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #cbd5f5;
+      max-width: 700px;
+    }
+
+    /* SECTION */
+    section {
+      padding: 100px 50px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #94a3b8;
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 900px;
+      color: #cbd5f5;
+      font-size: 16px;
+    }
+
+    .content ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    .content li {
+      margin-bottom: 12px;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      padding: 80px 20px;
+      background: #020617;
+    }
+
+    .btn {
+      padding: 14px 36px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 30px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    @media(max-width:768px) {
+      .hero { padding: 0 30px; }
+      .hero h1 { font-size: 32px; }
+      .nav { padding: 0 25px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">AGXen</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>IT Infrastructure Services</h1>
+    <p>
+      Reliable, scalable, and secure IT infrastructure solutions
+      designed to support modern business operations.
+    </p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Our IT Infrastructure Expertise</h2>
+      <p>End-to-end IT solutions for offices, enterprises, and growing businesses</p>
+    </div>
+
+    <div class="content">
+      <p>
+        AGXen provides complete IT infrastructure services that ensure
+        stability, performance, and security of your IT environment.
+        From small office setups to enterprise-level deployments,
+        we design and maintain systems that grow with your business.
+      </p>
+
+      <ul>
+        <li>Desktop & Laptop Installation, Repair, and Maintenance</li>
+        <li>Server Installation & Configuration (On-prem & Virtual)</li>
+        <li>Operating System & Software Deployment</li>
+        <li>Active Directory & User Management</li>
+        <li>Backup & Disaster Recovery Solutions</li>
+        <li>Hardware Procurement & Lifecycle Management</li>
+        <li>Performance Monitoring & Preventive Maintenance</li>
+        <li>IT Support & AMC Services</li>
+      </ul>
+
+      <p>
+        Our approach focuses on minimizing downtime, improving
+        productivity, and providing long-term reliability with
+        professional support.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Need Reliable IT Infrastructure?</h2>
+  <p style="margin:20px 0;color:#cbd5f5;">
+    Talk to our experts for customized IT solutions.
+  </p>
+  <a href="tel:+91XXXXXXXXXX" class="btn">Call Now</a>
+</div>
+
+<footer>
+  © 2026 AGXen Infrastructure & IT Solutions
+</footer>
+
+</body>
+</html>
