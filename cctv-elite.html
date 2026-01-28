@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CCTV Surveillance Solutions | AGXen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- GSAP -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<style>
+:root{
+  --bg:#020617;
+  --panel:rgba(15,23,42,.65);
+  --border:rgba(148,163,184,.15);
+  --muted:#94a3b8;
+  --accent:#38bdf8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Inter,sans-serif;
+  background:#020617;
+  color:#e5e7eb;
+  overflow-x:hidden;
+}
+
+/* ---------- CURSOR ---------- */
+.cursor{
+  width:22px;height:22px;
+  border:2px solid var(--accent);
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
+  z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform .1s ease;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 10vw;
+  position:relative;
+  background:
+    radial-gradient(circle at top right,rgba(56,189,248,.15),transparent 50%),
+    linear-gradient(180deg,rgba(2,6,23,.4),#020617),
+    url("assets/cctv.png") right center/cover no-repeat;
+}
+
+.hero-content{
+  max-width:720px;
+}
+
+.hero h1{
+  font-size:64px;
+  line-height:1.05;
+  letter-spacing:-1px;
+}
+
+.hero p{
+  margin:28px 0 44px;
+  font-size:20px;
+  color:var(--muted);
+}
+
+.hero-actions{
+  display:flex;
+  gap:18px;
+}
+
+.btn{
+  padding:16px 44px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  color:#020617;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.btn-outline{
+  padding:16px 44px;
+  border-radius:999px;
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+
+/* ---------- SECTION ---------- */
+section{
+  padding:140px 10vw;
+  position:relative;
+}
+
+.section-head{
+  max-width:760px;
+  margin-bottom:80px;
+}
+
+.section-head h2{
+  font-size:44px;
+}
+
+.section-head p{
+  margin-top:14px;
+  font-size:18px;
+  color:var(--muted);
+}
+
+/* ---------- GRID ---------- */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px;
+}
+
+.card{
+  background:linear-gradient(180deg,rgba(15,23,42,.75),rgba(2,6,23,.75));
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:36px;
+  backdrop-filter:blur(14px);
+  transition:.35s ease;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.02);
+  border-color:rgba(56,189,248,.5);
+  box-shadow:0 30px 80px rgba(56,189,248,.15);
+}
+
+.card h3{
+  font-size:18px;
+  margin-bottom:12px;
+}
+
+.card p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* ---------- SOLAR SECTION ---------- */
+.solar{
+  background:
+    radial-gradient(circle at center,rgba(56,189,248,.12),transparent 70%);
+}
+
+/* ---------- CTA ---------- */
+.cta{
+  text-align:center;
+  padding:160px 6vw;
+  background:radial-gradient(circle at center,rgba(56,189,248,.2),transparent);
+}
+
+.cta h2{font-size:46px}
+.cta p{margin:24px 0 46px;color:var(--muted);font-size:18px}
+
+/* ---------- FOOTER ---------- */
+footer{
+  padding:50px;
+  text-align:center;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:900px){
+  .hero{padding:0 6vw}
+  .hero h1{font-size:40px}
+  section{padding:100px 6vw}
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>CCTV Surveillance<br>Solutions</h1>
+    <p>
+      Intelligent CCTV surveillance solutions for homes, shops,
+      offices, warehouses, and open areas — designed for security,
+      visibility, and peace of mind.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:+91XXXXXXXXXX" class="btn">📞 Call Now</a>
+      <a href="https://wa.me/91XXXXXXXXXX" class="btn-outline">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section>
+  <div class="section-head">
+    <h2>Our CCTV Services</h2>
+    <p>End-to-end CCTV planning, installation, monitoring, and support.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3>📷 IP CCTV Systems</h3><p>High-definition cameras with centralized monitoring.</p></div>
+    <div class="card"><h3>🏪 Shop Surveillance</h3><p>Monitor counters, aisles, and entry points.</p></div>
+    <div class="card"><h3>🌙 Night Vision</h3><p>Clear footage even in complete darkness.</p></div>
+    <div class="card"><h3>💾 Secure Storage</h3><p>NVR and hybrid video retention.</p></div>
+    <div class="card"><h3>📱 Remote Monitoring</h3><p>Live view anytime, anywhere.</p></div>
+    <div class="card"><h3>🛠 AMC & Support</h3><p>Health checks and priority support.</p></div>
+  </div>
+</section>
+
+<!-- SOLAR -->
+<section class="solar">
+  <div class="section-head">
+    <h2>Solar CCTV for Farms & Open Areas</h2>
+    <p>Independent surveillance for farmland and remote locations.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3>🌾 Farmland Monitoring</h3><p>Protect crops and boundaries.</p></div>
+    <div class="card"><h3>☀ Solar Powered</h3><p>No electricity required.</p></div>
+    <div class="card"><h3>📡 4G Connectivity</h3><p>Live monitoring via mobile networks.</p></div>
+    <div class="card"><h3>🚨 Motion Alerts</h3><p>Instant alerts on unusual activity.</p></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Secure Your Property Today</h2>
+  <p>Talk to AGXen experts for a customized CCTV solution.</p>
+  <a href="tel:+91XXXXXXXXXX" class="btn">Get Free Consultation</a>
+</div>
+
+<footer>
+  © 2026 AGXen Infrastructure & IT Solutions
+</footer>
+
+<script>
+/* CURSOR */
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",e=>{
+  cursor.style.left=e.clientX+"px";
+  cursor.style.top=e.clientY+"px";
+});
+
+/* HERO */
+gsap.from(".hero h1",{y:60,opacity:0,duration:1});
+gsap.from(".hero p",{y:40,opacity:0,delay:.2});
+gsap.from(".hero-actions",{y:30,opacity:0,delay:.4});
+
+/* SCROLL ANIMATIONS */
+gsap.utils.toArray(".card").forEach(card=>{
+  gsap.from(card,{
+    scrollTrigger:{trigger:card,start:"top 85%"},
+    y:60,opacity:0,duration:.8
+  });
+});
+</script>
+
+</body>
+</html>
