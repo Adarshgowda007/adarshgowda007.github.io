@@ -1,0 +1,75 @@
+/* CCTV HERO */
+.cctv-hero {
+  background:
+    linear-gradient(rgba(2,6,23,0.8), rgba(2,6,23,0.95)),
+    url("assets/cctv_banner.jpg") center/cover no-repeat;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 0;
+}
+
+.section.dark {
+  background-color: #020617;
+}
+
+/* CONTAINERS */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* TEXT */
+.section-text {
+  max-width: 800px;
+  color: #cbd5f5;
+}
+
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARDS */
+.card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
