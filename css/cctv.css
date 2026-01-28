@@ -1,0 +1,157 @@
+/* ==========================
+   RESET
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+body {
+  background: #020617;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* ==========================
+   HERO
+========================== */
+.hero {
+  height: 65vh;
+  background:
+    linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.95));
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #cbd5e1;
+  margin-bottom: 26px;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #38bdf8;
+  color: #020617;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #0ea5e9;
+}
+
+/* ==========================
+   SERVICES SECTION
+========================== */
+.services {
+  background: #020617;
+  padding: 80px;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.section-desc {
+  max-width: 820px;
+  color: #9ca3af;
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+/* ==========================
+   GRID
+========================== */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ==========================
+   SERVICE CARD
+========================== */
+.service-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(56,189,248,0.15);
+}
+
+/* ICON (EMOJI) */
+.service-card .icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(56,189,248,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.service-card h3 {
+  font-size: 20px;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 30px;
+    height: 55vh;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .services {
+    padding: 50px 30px;
+  }
+}
