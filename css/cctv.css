@@ -23,11 +23,15 @@ body {
 .hero {
   height: 65vh;
   background:
-    linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.95));
+    linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.95)),
+    url("assets/cctv.png");   /* OPTIONAL IMAGE */
+  background-size: cover;
+  background-position: right center;
   display: flex;
   align-items: center;
   padding: 0 80px;
 }
+
 
 .hero-content {
   max-width: 720px;
