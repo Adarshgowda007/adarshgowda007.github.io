@@ -43,19 +43,25 @@ body {
 }
 
 /* HERO */
+/* HERO */
 .hero {
   height: 70vh;
-  background:
+
+  background-image:
     linear-gradient(
       rgba(2, 6, 23, 0.65),
       rgba(2, 6, 23, 0.95)
     ),
-    url("assets/civil.jpg") center / cover no-repeat;
+    url("assets/civil.jpg");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   padding: 0 80px;
 }
-
 
 .hero-content {
   max-width: 650px;
