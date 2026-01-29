@@ -1,0 +1,190 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 80px;
+  background: #020617;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.site-header nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #cbd5f5;
+  font-weight: 500;
+}
+
+.site-header nav a:hover,
+.site-header nav a.active {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  height: 70vh;
+  background:
+    linear-gradient(rgba(2,6,23,0.7), rgba(2,6,23,0.95));
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 28px;
+  color: #e5e7eb;
+}
+
+/* BUTTONS */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.btn-secondary {
+  background: #22c55e;
+  color: #020617;
+}
+
+/* SERVICES */
+.services {
+  padding: 80px;
+  background: #0f172a;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #020617;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* WHY US */
+.why-us {
+  padding: 70px 80px;
+  background: #020617;
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.why-us ul {
+  list-style: none;
+  font-size: 16px;
+}
+
+.why-us li {
+  margin-bottom: 12px;
+}
+
+/* CTA */
+.cta {
+  padding: 70px;
+  text-align: center;
+  background: #0f172a;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  margin-bottom: 25px;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #020617;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .site-header,
+  .hero,
+  .services,
+  .why-us {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
