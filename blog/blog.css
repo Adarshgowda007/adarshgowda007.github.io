@@ -271,6 +271,19 @@ body {
   color: var(--muted);
 }
 
+.footer a{
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover{
+  color: var(--primary);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
 /* MOBILE */
 
 @media(max-width:768px){
