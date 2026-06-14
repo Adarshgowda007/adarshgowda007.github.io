@@ -5,12 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AGXEN Tech Spaces | Infrastructure, Linux & Security</title>
+<title>AGXEN Tech Spaces</title>
 
 <meta name="description"
-content="Enterprise technology guides covering Windows, Linux, Networking, Security, Monitoring, FreeIPA, Zabbix and ERPNext.">
+content="Practical infrastructure knowledge covering Linux, Windows, Monitoring, FreeIPA, Security and Enterprise Operations.">
 
 <link rel="stylesheet" href="blog.css">
+
 </head>
 
 <body>
@@ -18,24 +19,25 @@ content="Enterprise technology guides covering Windows, Linux, Networking, Secur
 <!-- NAVBAR -->
 
 <nav class="navbar">
-  <div class="nav-container">
 
-    <div class="logo">
-      AGXEN <span>Tech Spaces</span>
-    </div>
+<div class="nav-container">
 
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#articles">Articles</a>
-      <a href="/blog/about/">About</a>
-      <a href="/blog/contact/">Contact</a>
-    </div>
+<div class="logo">
+AGXEN <span>Tech Spaces</span>
+</div>
 
-  </div>
+<div class="nav-links">
+<a href="/blog/">Home</a>
+<a href="/blog/os/">OS</a>
+<a href="/blog/monitoring/">Monitoring</a>
+<a href="/blog/security/">Security</a>
+<a href="/blog/about/">About</a>
+<a href="/blog/contact/">Contact</a>
+</div>
+
+</div>
+
 </nav>
-
-<!-- HERO -->
 
 <!-- HERO -->
 
@@ -51,17 +53,19 @@ AGXEN <span>Tech Spaces</span>
 </h1>
 
 <p>
-Enterprise Linux, Monitoring, FreeIPA, Networking, Security and Infrastructure Engineering Knowledge Base.
+Practical Infrastructure Knowledge Base built from real-world
+Linux administration, monitoring, identity management,
+networking and enterprise operations experience.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#featured" class="btn btn-primary">
-Start Learning
+<a href="#topics" class="btn btn-primary">
+Browse Topics
 </a>
 
-<a href="#categories" class="btn btn-outline">
-Browse Topics
+<a href="#latest" class="btn btn-outline">
+Latest Articles
 </a>
 
 </div>
@@ -70,9 +74,9 @@ Browse Topics
 
 </section>
 
-<!-- FEATURED -->
+<!-- FEATURED ARTICLE -->
 
-<section class="section" id="featured">
+<section class="section">
 
 <h2 class="section-title">
 Featured Guide
@@ -85,8 +89,9 @@ Complete FreeIPA Deployment Guide
 </h2>
 
 <p>
-Learn how to deploy FreeIPA in production with DNS integration,
-client enrollment, replication, authentication and operational best practices.
+Production-ready FreeIPA deployment including DNS integration,
+replication, Linux client enrollment, authentication,
+troubleshooting and operational best practices.
 </p>
 
 <br>
@@ -99,9 +104,71 @@ Read Guide
 
 </section>
 
+<!-- BROWSE TOPICS -->
+
+<section class="section" id="topics">
+
+<h2 class="section-title">
+Browse Technologies
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Operating Systems</h3>
+<p>
+Windows Server, Windows 11,
+Rocky Linux, Ubuntu,
+RHEL, Debian and Enterprise Linux.
+</p>
+
+<br>
+
+<a href="/blog/os/" class="btn btn-outline">
+Explore
+</a>
+
+</div>
+
+<div class="card">
+<h3>Monitoring</h3>
+<p>
+Zabbix, Grafana,
+Prometheus, StorCLI,
+Hardware Monitoring and Alerting.
+</p>
+
+<br>
+
+<a href="/blog/monitoring/" class="btn btn-outline">
+Explore
+</a>
+
+</div>
+
+<div class="card">
+<h3>Identity & Security</h3>
+<p>
+FreeIPA, Authentication,
+LDAP, Access Control,
+Hardening and Enterprise Security.
+</p>
+
+<br>
+
+<a href="/blog/security/" class="btn btn-outline">
+Explore
+</a>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- LATEST ARTICLES -->
 
-<section class="section">
+<section class="section" id="latest">
 
 <h2 class="section-title">
 Latest Articles
@@ -110,95 +177,48 @@ Latest Articles
 <div class="grid">
 
 <div class="article-card">
-<h3>Linux Hardening Checklist</h3>
-<p>Security baseline for production Linux servers.</p>
+<h3>
+Rocky Linux Static IP Configuration
+</h3>
+
+<p>
+Step-by-step guide to configure static networking
+on Rocky Linux servers.
+</p>
+
 </div>
 
 <div class="article-card">
-<h3>Join Linux Client to FreeIPA</h3>
-<p>Complete enrollment and authentication guide.</p>
+<h3>
+Join Rocky Linux to FreeIPA
+</h3>
+
+<p>
+Complete Linux client enrollment and authentication guide.
+</p>
+
 </div>
 
 <div class="article-card">
-<h3>Zabbix Proxy Architecture</h3>
-<p>Scale monitoring across thousands of systems.</p>
+<h3>
+Install Zabbix Agent on Linux
+</h3>
+
+<p>
+Monitor Linux servers using Zabbix agent and templates.
+</p>
+
 </div>
 
 <div class="article-card">
-<h3>Prometheus + Grafana Stack</h3>
-<p>Deploy modern infrastructure monitoring.</p>
-</div>
+<h3>
+Linux Hardening Checklist
+</h3>
 
-<div class="article-card">
-<h3>StorCLI Monitoring</h3>
-<p>Monitor RAID controllers using Grafana.</p>
-</div>
-
-<div class="article-card">
-<h3>FreeIPA Replication</h3>
-<p>Multi-master architecture and troubleshooting.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- CATEGORIES -->
-
-<section class="section" id="categories">
-
-<h2 class="section-title">
-Technology Categories
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Linux</h3>
 <p>
-Rocky Linux, Ubuntu, RHEL,
-Automation, Security and Operations.
+Production security baseline for Linux infrastructure.
 </p>
-</div>
 
-<div class="card">
-<h3>Windows</h3>
-<p>
-Active Directory, PowerShell,
-Group Policy and Windows Server.
-</p>
-</div>
-
-<div class="card">
-<h3>Monitoring</h3>
-<p>
-Zabbix, Prometheus,
-Grafana, StorCLI and Alerting.
-</p>
-</div>
-
-<div class="card">
-<h3>FreeIPA</h3>
-<p>
-Identity Management,
-Authentication and SSO.
-</p>
-</div>
-
-<div class="card">
-<h3>Networking</h3>
-<p>
-VPN, VLAN, Routing,
-Switching and Firewalls.
-</p>
-</div>
-
-<div class="card">
-<h3>ERPNext</h3>
-<p>
-HRMS, Docker,
-Payroll and Automation.
-</p>
 </div>
 
 </div>
@@ -215,35 +235,59 @@ Learning Paths
 
 <div class="grid">
 
-<div class="article-card">
+<div class="card">
+
 <h3>Linux Administrator</h3>
+
 <p>
-Linux Basics → Security →
-Automation → Monitoring
+
+1. Linux Fundamentals<br>
+2. Networking Basics<br>
+3. SSH Security<br>
+4. User Management<br>
+5. Automation
+
 </p>
+
 </div>
 
-<div class="article-card">
-<h3>FreeIPA Engineer</h3>
-<p>
-Installation → Clients →
-Replication → Operations
-</p>
-</div>
+<div class="card">
 
-<div class="article-card">
 <h3>Monitoring Engineer</h3>
+
 <p>
-Zabbix → Grafana →
-Prometheus → Enterprise Monitoring
+
+1. Zabbix Fundamentals<br>
+2. Grafana Dashboards<br>
+3. Prometheus Basics<br>
+4. Alerting<br>
+5. Infrastructure Monitoring
+
 </p>
+
+</div>
+
+<div class="card">
+
+<h3>Identity Management</h3>
+
+<p>
+
+1. FreeIPA Basics<br>
+2. Kerberos<br>
+3. LDAP<br>
+4. Client Enrollment<br>
+5. Access Control
+
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- WHY AGXEN -->
+<!-- ABOUT -->
 
 <section class="section">
 
@@ -254,21 +298,16 @@ Why AGXEN Tech Spaces?
 <div class="content-card">
 
 <p>
-Built by infrastructure engineers who manage real production systems.
+AGXEN Tech Spaces is built by infrastructure engineers,
+not content marketers.
 </p>
 
 <br>
 
 <p>
-Every guide focuses on implementation, troubleshooting,
-monitoring, security and operational excellence.
-</p>
-
-<br>
-
-<p>
-No fluff. No rewritten documentation.
-Practical knowledge that works in production.
+Every guide is based on practical deployments,
+enterprise operations, monitoring implementations,
+identity management and production troubleshooting.
 </p>
 
 </div>
