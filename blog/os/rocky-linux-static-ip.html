@@ -5,10 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Article Title | AGXEN Tech Spaces</title>
+<title>How to Configure a Static IP Address in Rocky Linux 9 | AGXEN Tech Spaces</title>
 
 <meta name="description"
-content="Replace with article description">
+content="Learn how to configure a static IP address in Rocky Linux 9 using NetworkManager and nmcli commands.">
 
 <link rel="stylesheet" href="../blog.css">
 
@@ -125,15 +125,15 @@ AGXEN <span>Tech Spaces</span>
 <div class="article-header">
 
 <div class="category-badge">
-Category Name
+Operating Systems
 </div>
 
 <h1 class="article-title">
-Article Title Goes Here
+How to Configure a Static IP Address in Rocky Linux 9
 </h1>
 
 <div class="article-meta">
-Published: January 2026 • Reading Time: 10 Minutes
+Published: June 2026 • Reading Time: 5 Minutes
 </div>
 
 </div>
@@ -143,7 +143,7 @@ Published: January 2026 • Reading Time: 10 Minutes
 <h2>Introduction</h2>
 
 <p>
-Replace this section with article introduction.
+Configuring a static IP address is one of the first tasks performed after installing Rocky Linux. Servers should always use predictable network addressing to ensure reliable communication and service availability.
 </p>
 
 </div>
@@ -153,34 +153,42 @@ Replace this section with article introduction.
 <h2>Prerequisites</h2>
 
 <ul>
-<li>Requirement 1</li>
-<li>Requirement 2</li>
-<li>Requirement 3</li>
+<li>Rocky Linux 9 installed</li>
+<li>Root or sudo access</li>
+<li>Gateway and DNS information</li>
 </ul>
 
 </div>
 
 <div class="article-card">
 
-<h2>Step 1</h2>
+<h2>Step 1 - Identify Network Interface</h2>
 
 <p>
-Explain the first step.
+Identify the active network interface before making any configuration changes.
 </p>
 
 <pre><code>
-dnf update -y
+ip addr
 </code></pre>
 
 </div>
 
 <div class="article-card">
 
-<h2>Step 2</h2>
+<h2>Step 2 - Configure Static IP<</h2>
 
 <p>
-Explain the next step.
+Use NetworkManager to assign a static IP address.
 </p>
+
+<pre><code>
+nmcli connection modify ens192 \
+ipv4.addresses 192.168.1.100/24 \
+ipv4.gateway 192.168.1.1 \
+ipv4.dns "8.8.8.8 1.1.1.1" \
+ipv4.method manual
+</code></pre>
 
 </div>
 
@@ -189,9 +197,9 @@ Explain the next step.
 <h2>Troubleshooting</h2>
 
 <ul>
-<li>Issue 1</li>
-<li>Issue 2</li>
-<li>Issue 3</li>
+<li>Verify the correct interface name using ip addr</li>
+<li>Verify gateway configuration using ip route</li>
+<li>Verify DNS settings using cat /etc/resolv.conf</li>
 </ul>
 
 </div>
@@ -201,7 +209,7 @@ Explain the next step.
 <h2>Conclusion</h2>
 
 <p>
-Summarize the article.
+Your Rocky Linux server is now configured with a static IP address using NetworkManager. Static addressing is recommended for production systems and infrastructure services.
 </p>
 
 </div>
