@@ -45,19 +45,18 @@ body {
 }
 
 .nav-container {
-  max-width: 1400px;
-  margin: auto;
+  width: 100%;
+  padding: 18px 60px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 18px 30px;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
   color: white;
 }
 
@@ -85,7 +84,7 @@ body {
 /* HERO */
 
 .hero {
-  min-height: 80vh;
+  min-height: 55vh;
 
   display: flex;
   align-items: center;
@@ -109,7 +108,9 @@ body {
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 750px;
+  position: relative;
+  z-index: 2;
 }
 .hero-glow{
     position:absolute;
@@ -135,7 +136,7 @@ body {
     opacity:.15;
 }
 .hero h1 {
-  font-size: 4rem;
+  font-size: 3.2rem;
   margin-bottom: 20px;
 }
 
