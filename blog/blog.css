@@ -279,15 +279,24 @@ body {
 
 .nav-container{
 padding:15px 20px;
+flex-direction:column;
+align-items:center;
 }
 
 .logo{
-font-size:1.4rem;
+font-size:1.8rem;
+text-align:center;
 }
 
 .nav-links{
-display:none;
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+font-size:14px;
+flex-wrap:wrap;
 }
+
 
 /* HERO */
 
