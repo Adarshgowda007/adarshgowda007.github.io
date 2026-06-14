@@ -1,1 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How to Join Rocky Linux 9 Client to FreeIPA Domain | AGXEN Tech Spaces</title>
+
+<meta name="description"
+content="Step-by-step guide to enroll Rocky Linux clients into a FreeIPA domain for centralized authentication and identity management..">
+
+<link rel="stylesheet" href="../blog.css">
+
+<style>
+
+.article-container{
+max-width:1000px;
+margin:60px auto;
+padding:0 20px;
+}
+
+.article-header{
+margin-bottom:40px;
+}
+
+.category-badge{
+display:inline-block;
+padding:8px 14px;
+border-radius:30px;
+background:#06b6d4;
+color:black;
+font-weight:600;
+margin-bottom:20px;
+}
+
+.article-title{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.article-meta{
+color:#94a3b8;
+margin-bottom:30px;
+}
+
+.article-card{
+background:#111827;
+padding:30px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,.08);
+margin-bottom:30px;
+}
+
+.article-card h2{
+margin-bottom:20px;
+color:#06b6d4;
+}
+
+.article-card p,
+.article-card li{
+line-height:1.8;
+color:#d1d5db;
+}
+
+.article-card ul{
+padding-left:20px;
+}
+
+pre{
+background:#030712;
+padding:20px;
+border-radius:10px;
+overflow:auto;
+margin-top:20px;
+}
+
+code{
+color:#22d3ee;
+}
+
+.cta-box{
+text-align:center;
+padding:40px;
+border-radius:16px;
+background:#111827;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.cta-box a{
+display:inline-block;
+margin-top:20px;
+padding:12px 24px;
+background:#06b6d4;
+color:black;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="nav-container">
+
+<div class="logo">
+AGXEN <span>Tech Spaces</span>
+</div>
+
+<div class="nav-links">
+<a href="/blog/os/">← Operating Systems</a>
+<a href="/blog/">Knowledge Base</a>
+</div>
+
+</div>
+</nav>
+
+<div class="article-container">
+
+<div class="article-header">
+
+<div class="category-badge">
+Identity & Security
+</div>
+<div class="article-meta">
+
+<a href="/blog/">Knowledge Base</a>
+&nbsp;›&nbsp;
+<a href="/blog/os/">Operating Systems</a>
+&nbsp;›&nbsp;
+Rocky Linux
+
+</div>
+<h1 class="article-title">
+How to Join Rocky Linux 9 Client to FreeIPA Domain
+</h1>
+
+<div class="article-meta">
+Published: June 2026 • Reading Time: 5 Minutes
+</div>
+
+</div>
+
+<div class="article-card">
+
+<h2>Introduction</h2>
+
+<p>
+FreeIPA provides centralized identity management, authentication, authorization and policy enforcement for Linux environments.
+
+This guide explains how to join a Rocky Linux 9 client to an existing FreeIPA domain.
+</p>
+
+</div>
+
+<div class="article-card">
+
+<h2>Prerequisites</h2>
+
+<ul>
+<li>Working FreeIPA server</li>
+<li>Proper DNS resolution</li>
+<li>Time synchronization configured</li>
+<li>Root or sudo access</li>
+</ul>
+
+</div>
+
+<div class="article-card">
+
+<h2>Step 1 - Verify DNS Resolution</h2>
+
+<p>
+Verify the FreeIPA server can be resolved.
+
+nslookup ipa.example.com
+
+Verify reverse lookup:
+
+host <ipa-server-ip>
+</p>
+
+<pre><code>
+ip addr
+</code></pre>
+
+</div>
+
+<div class="article-card">
+
+<h2>Step 2 - Install FreeIPA Client</h2>
+
+<p>
+Install required packages:
+</p>
+
+<pre><code>
+dnf install freeipa-client -y
+</code></pre>
+
+</div>
+
+<div class="article-card">
+
+<h2>Step 3 - Enroll Client</h2>
+
+<p>
+Join the domain:
+</p>
+
+<pre><code>
+ipa-client-install \ --mkhomedir \ --enable-dns-updates
+</code></pre>
+
+<p>Enter the FreeIPA administrator credentials when prompted.</p>
+</div>
+
+<div class="article-card">
+
+<h2>Step 4 - Verify Kerberos Authentication</h2>
+
+<p>
+Obtain a Kerberos ticket:
+</p>
+
+<pre><code>
+kinit admin
+</code></pre>
+
+<p>
+Check ticket status:
+</p>
+<pre><code>
+klist
+</code></pre> 
+</div>
+
+<div class="article-card">
+
+<h2>Troubleshooting</h2>
+
+<ul>
+<li>DNS Issues</li>
+<li>Time Synchronization Issues</li>
+<li>Kerberos Authentication Problems</li>
+</ul>
+
+</div>
+
+<div class="article-card">
+
+<h2>Conclusion</h2>
+
+<p>
+The Rocky Linux client is now successfully joined to the FreeIPA domain and can authenticate users using centralized identity management.
+</p>
+
+</div>
+<div class="content-card">
+
+<h2>Continue Reading</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+<h3>← Previous</h3>
+<p>
+Operating Systems Home
+</p>
+</div>
+
+<div class="info-card">
+<h3>Next →</h3>
+<p>
+Join Rocky Linux to FreeIPA
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<footer class="footer">
+
+<a href="/blog/about/">About</a>
+<a href="/blog/contact/">Contact</a>
+<a href="/blog/privacy-policy/">Privacy Policy</a>
+<a href="/blog/disclaimer/">Disclaimer</a>
+<a href="/blog/terms/">Terms</a>
+
+<br><br>
+
+© 2026 AGXEN Tech Spaces
+
+</footer>
+
+</body>
+</html>
